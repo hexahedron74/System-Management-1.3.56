@@ -1,5 +1,5 @@
 # system.info
-![GitHub](https://img.shields.io/github/appveyor/hexahedron74/CSharp-system.info)
+![GitHub](https://img.shields.io/github/appveyor/build/hexahedron74/CSharp-system.info)
 ![GitHub](https://img.shields.io/github/license/hexahedron74/CSharp-system.info)
 ![GitHub](https://img.shields.io/github/languages/top/hexahedron74/CSharp-system.info)
 ![GitHub](https://img.shields.io/github/languages/code-size/hexahedron74/CSharp-system.info)
