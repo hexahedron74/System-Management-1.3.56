@@ -1,6 +1,6 @@
 # system.info
 ![GitHub](https://img.shields.io/github/license/noonmaru/psychics)
-![GitHub](https://img.shields.io/github/languages/top/beygee/survive)
+![GitHub](https://img.shields.io/github/languages/top/hexahedron74/CSharp-system.info)
 
 ---
 ### 소개
