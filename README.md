@@ -1,6 +1,6 @@
 # system.info
-![GitHub](https://img.shields.io/github/license/noonmaru/psychics)
-![GitHub](https://img.shields.io/github/languages/top/hexahedron74/CSharp-system.info)
+![GitHub](https://img.shields.io/github/license/hexahedron74/CShap-system.info)
+![GitHub](https://img.shields.io/github/languages/top/hexahedron74/CShap-system.info)
 
 ---
 ### 소개
