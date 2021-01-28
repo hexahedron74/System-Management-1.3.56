@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Management;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -56,12 +58,14 @@ namespace Task_Manager
 
         private void cpu_processor_number()
         {
-          processor_number.Text = Convert.ToString(Environment.);
+            Process[] allProc = Process.GetProcesses();
+            processor_number.Text = Convert.ToString(allProc.Length);
         }
 
         private void logical_processor_number()
         {
             logic_pro_num.Text = Convert.ToString(Environment.ProcessorCount);
         }
+
     }
 }
