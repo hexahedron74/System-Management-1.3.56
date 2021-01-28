@@ -15,6 +15,7 @@
 * Hardware.Info.1.0.0
 * managedwifi.1.1.0
 * OpenHardwareMonitor.0.7.1
+* System.Buffers.4.5.1
 * System.Managements.5.0.0
 * System.Memory.4.5.4
 * System.Numerics.Vectors.4.5.0
