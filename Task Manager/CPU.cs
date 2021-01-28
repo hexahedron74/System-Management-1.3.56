@@ -30,6 +30,18 @@ namespace Task_Manager
             timer1.Start();
             cpu_core_number();
             cpu_name();
+            cpu_processor_number();
+            logical_processor_number();
+        }
+
+        private void cpu_name()
+        {
+            ManagementObjectSearcher win32Proc = new ManagementObjectSearcher("select * from Win32_Processor");
+            foreach (ManagementObject obj in win32Proc.Get())
+            {
+                string procName = obj["name"].ToString();
+                cpu_main_name.Text = procName;
+            }
         }
 
         private void cpu_core_number()
@@ -42,14 +54,14 @@ namespace Task_Manager
             core_number.Text = Convert.ToString(coreCount) + " Core";
         }
 
-        private void cpu_name()
+        private void cpu_processor_number()
         {
-            ManagementObjectSearcher win32Proc = new ManagementObjectSearcher("select * from Win32_Processor");
-            foreach (ManagementObject obj in win32Proc.Get())
-            {
-                string procName = obj["name"].ToString();
-                cpu_main_name.Text = procName;
-            }
+          processor_number.Text = Convert.ToString(Environment.);
+        }
+
+        private void logical_processor_number()
+        {
+            logic_pro_num.Text = Convert.ToString(Environment.ProcessorCount);
         }
     }
 }
