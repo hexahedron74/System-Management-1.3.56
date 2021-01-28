@@ -153,7 +153,6 @@ namespace Task_Manager
                     var macAddrLen = (uint)macAddr.Length;
 
                     var str = new String[(int)macAddrLen];
-
                     for (int i = 0; i < macAddrLen; i++)
                     {
                         if (i == macAddrLen - 1)

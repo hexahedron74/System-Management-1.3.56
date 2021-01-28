@@ -42,9 +42,9 @@ namespace Task_Manager
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.userName = new System.Windows.Forms.Label();
+            this.core_number = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.computerName = new System.Windows.Forms.Label();
+            this.cpu_main_name = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cpuUsagePb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
@@ -158,9 +158,9 @@ namespace Task_Manager
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 20;
-            this.guna2CustomGradientPanel2.Controls.Add(this.userName);
+            this.guna2CustomGradientPanel2.Controls.Add(this.core_number);
             this.guna2CustomGradientPanel2.Controls.Add(this.label7);
-            this.guna2CustomGradientPanel2.Controls.Add(this.computerName);
+            this.guna2CustomGradientPanel2.Controls.Add(this.cpu_main_name);
             this.guna2CustomGradientPanel2.Controls.Add(this.label5);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(39, 68);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
@@ -168,16 +168,16 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(364, 148);
             this.guna2CustomGradientPanel2.TabIndex = 18;
             // 
-            // userName
+            // core_number
             // 
-            this.userName.AutoSize = true;
-            this.userName.BackColor = System.Drawing.Color.Transparent;
-            this.userName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName.Location = new System.Drawing.Point(6, 96);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(53, 23);
-            this.userName.TabIndex = 14;
-            this.userName.Text = "name";
+            this.core_number.AutoSize = true;
+            this.core_number.BackColor = System.Drawing.Color.Transparent;
+            this.core_number.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.core_number.Location = new System.Drawing.Point(6, 96);
+            this.core_number.Name = "core_number";
+            this.core_number.Size = new System.Drawing.Size(53, 23);
+            this.core_number.TabIndex = 14;
+            this.core_number.Text = "name";
             // 
             // label7
             // 
@@ -186,20 +186,20 @@ namespace Task_Manager
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 23);
+            this.label7.Size = new System.Drawing.Size(116, 23);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Code Name";
+            this.label7.Text = "Core Number";
             // 
-            // computerName
+            // cpu_main_name
             // 
-            this.computerName.AutoSize = true;
-            this.computerName.BackColor = System.Drawing.Color.Transparent;
-            this.computerName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.computerName.Location = new System.Drawing.Point(6, 37);
-            this.computerName.Name = "computerName";
-            this.computerName.Size = new System.Drawing.Size(53, 23);
-            this.computerName.TabIndex = 12;
-            this.computerName.Text = "name";
+            this.cpu_main_name.AutoSize = true;
+            this.cpu_main_name.BackColor = System.Drawing.Color.Transparent;
+            this.cpu_main_name.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpu_main_name.Location = new System.Drawing.Point(6, 37);
+            this.cpu_main_name.Name = "cpu_main_name";
+            this.cpu_main_name.Size = new System.Drawing.Size(53, 23);
+            this.cpu_main_name.TabIndex = 12;
+            this.cpu_main_name.Text = "name";
             // 
             // label5
             // 
@@ -253,9 +253,9 @@ namespace Task_Manager
         private System.Windows.Forms.Timer timer1;
         private System.Diagnostics.PerformanceCounter pCPU;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Label userName;
+        private System.Windows.Forms.Label core_number;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label computerName;
+        private System.Windows.Forms.Label cpu_main_name;
         private System.Windows.Forms.Label label5;
     }
 }
