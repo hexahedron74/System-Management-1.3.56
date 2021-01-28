@@ -30,6 +30,9 @@ namespace Task_Manager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.storage_main_title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cpuUsagePb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -49,16 +52,20 @@ namespace Task_Manager
             this.label6 = new System.Windows.Forms.Label();
             this.logic_pro_num = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.chartCPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cpuUsagePb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).BeginInit();
             this.SuspendLayout();
             // 
             // storage_main_title
             // 
             this.storage_main_title.AutoSize = true;
             this.storage_main_title.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storage_main_title.Location = new System.Drawing.Point(34, 27);
+            this.storage_main_title.Location = new System.Drawing.Point(27, 27);
             this.storage_main_title.Name = "storage_main_title";
             this.storage_main_title.Size = new System.Drawing.Size(156, 26);
             this.storage_main_title.TabIndex = 3;
@@ -167,10 +174,10 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.Controls.Add(this.label6);
             this.guna2CustomGradientPanel2.Controls.Add(this.core_number);
             this.guna2CustomGradientPanel2.Controls.Add(this.label7);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(39, 68);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(17, 68);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(169, 384);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(191, 384);
             this.guna2CustomGradientPanel2.TabIndex = 18;
             // 
             // core_number
@@ -200,7 +207,7 @@ namespace Task_Manager
             this.cpu_main_name.AutoSize = true;
             this.cpu_main_name.BackColor = System.Drawing.Color.Transparent;
             this.cpu_main_name.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpu_main_name.Location = new System.Drawing.Point(223, 30);
+            this.cpu_main_name.Location = new System.Drawing.Point(243, 30);
             this.cpu_main_name.Name = "cpu_main_name";
             this.cpu_main_name.Size = new System.Drawing.Size(53, 23);
             this.cpu_main_name.TabIndex = 12;
@@ -250,11 +257,39 @@ namespace Task_Manager
             this.label9.TabIndex = 19;
             this.label9.Text = "Logical Processor";
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderRadius = 20;
+            this.guna2CustomGradientPanel1.Controls.Add(this.chartCPU);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(227, 68);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(540, 384);
+            this.guna2CustomGradientPanel1.TabIndex = 19;
+            // 
+            // chartCPU
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chartCPU.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartCPU.Legends.Add(legend3);
+            this.chartCPU.Location = new System.Drawing.Point(3, 10);
+            this.chartCPU.Name = "chartCPU";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "CPU";
+            this.chartCPU.Series.Add(series3);
+            this.chartCPU.Size = new System.Drawing.Size(534, 362);
+            this.chartCPU.TabIndex = 20;
+            this.chartCPU.Text = "chart1";
+            // 
             // CPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.cpuTempPb);
@@ -273,6 +308,8 @@ namespace Task_Manager
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,5 +336,7 @@ namespace Task_Manager
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label logic_pro_num;
         private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartCPU;
     }
 }

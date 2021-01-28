@@ -25,6 +25,7 @@ namespace Task_Manager
             float fcpu = pCPU.NextValue();
             cpuUsagePb.Value = (int)fcpu;
             cpuUsageLabel.Text = string.Format("{0:0.00}%", fcpu);
+            chartCPU.Series["CPU"].Points.AddY(fcpu);
         }
 
         private void CPU_Load(object sender, EventArgs e)
