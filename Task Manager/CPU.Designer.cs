@@ -60,6 +60,7 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).BeginInit();
+            this.guna2CustomGradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // storage_main_title
@@ -75,6 +76,7 @@ namespace Task_Manager
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(97, 618);
             this.label1.Name = "label1";
@@ -101,7 +103,7 @@ namespace Task_Manager
             // 
             this.cpuUsageLabel.AutoSize = true;
             this.cpuUsageLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuUsageLabel.Location = new System.Drawing.Point(38, 57);
+            this.cpuUsageLabel.Location = new System.Drawing.Point(37, 57);
             this.cpuUsageLabel.Name = "cpuUsageLabel";
             this.cpuUsageLabel.Size = new System.Drawing.Size(57, 19);
             this.cpuUsageLabel.TabIndex = 10;
@@ -122,8 +124,9 @@ namespace Task_Manager
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(354, 618);
+            this.label2.Location = new System.Drawing.Point(332, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 19);
             this.label2.TabIndex = 7;
@@ -144,6 +147,7 @@ namespace Task_Manager
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(587, 618);
             this.label3.Name = "label3";
@@ -291,6 +295,7 @@ namespace Task_Manager
             // guna2CustomGradientPanel3
             // 
             this.guna2CustomGradientPanel3.BorderRadius = 20;
+            this.guna2CustomGradientPanel3.Controls.Add(this.label2);
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(17, 470);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
@@ -309,7 +314,6 @@ namespace Task_Manager
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cpu_main_name);
             this.Controls.Add(this.cpuSpeedPb);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.cpuUsagePb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.storage_main_title);
@@ -324,6 +328,8 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).EndInit();
+            this.guna2CustomGradientPanel3.ResumeLayout(false);
+            this.guna2CustomGradientPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

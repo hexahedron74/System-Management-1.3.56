@@ -62,10 +62,10 @@ namespace Task_Manager
 
         private void UpdateCpuChart()
         {
-            chartCPU.Series["Series1"].Points.Clear();
+            chartCPU.Series["CPU"].Points.Clear();
             for(int i = 0; i < cpuArray.Length -1; ++i)
             {
-                chartCPU.Series["Series1"].Points.AddY(cpuArray[i]);
+                chartCPU.Series["CPU"].Points.AddY(cpuArray[i]);
             }
         }
 
