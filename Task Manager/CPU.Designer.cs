@@ -45,6 +45,12 @@ namespace Task_Manager
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ClockSpeed = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.logic_pro_num = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.processor_number = new System.Windows.Forms.Label();
@@ -176,6 +182,12 @@ namespace Task_Manager
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 20;
+            this.guna2CustomGradientPanel2.Controls.Add(this.label11);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label12);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label8);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label10);
+            this.guna2CustomGradientPanel2.Controls.Add(this.ClockSpeed);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label5);
             this.guna2CustomGradientPanel2.Controls.Add(this.logic_pro_num);
             this.guna2CustomGradientPanel2.Controls.Add(this.label9);
             this.guna2CustomGradientPanel2.Controls.Add(this.processor_number);
@@ -187,6 +199,72 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(191, 384);
             this.guna2CustomGradientPanel2.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 341);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 23);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(11, 318);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(146, 23);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Logical Processor";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 281);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 23);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "name";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 258);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(146, 23);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Logical Processor";
+            // 
+            // ClockSpeed
+            // 
+            this.ClockSpeed.AutoSize = true;
+            this.ClockSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.ClockSpeed.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClockSpeed.Location = new System.Drawing.Point(11, 214);
+            this.ClockSpeed.Name = "ClockSpeed";
+            this.ClockSpeed.Size = new System.Drawing.Size(53, 23);
+            this.ClockSpeed.TabIndex = 22;
+            this.ClockSpeed.Text = "name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 23);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Basic Speed";
             // 
             // logic_pro_num
             // 
@@ -359,5 +437,11 @@ namespace Task_Manager
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCPU;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label ClockSpeed;
+        private System.Windows.Forms.Label label5;
     }
 }

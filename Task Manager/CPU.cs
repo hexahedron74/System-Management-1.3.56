@@ -23,6 +23,7 @@ namespace Task_Manager
             InitializeComponent();
         }
         
+        //live update cpu usage
         private void timer1_Tick(object sender, EventArgs e)
         {
             float fcpu = pCPU.NextValue();
@@ -31,6 +32,7 @@ namespace Task_Manager
             chartCPU.Series["CPU"].Points.AddY(fcpu);
         }
 
+        //load all the cpu information
         private void CPU_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -39,8 +41,10 @@ namespace Task_Manager
             cpu_processor_number();
             logical_processor_number();
             startCpuThread();
+            currentClockSpeed();
         }
 
+        //live update cpu usage chart
         private void getPerformanceCounters()
         {
             var cpuPerfCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
@@ -56,7 +60,7 @@ namespace Task_Manager
                 {
 
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(1000);//thread 1 second
             }
         }
 
@@ -69,6 +73,7 @@ namespace Task_Manager
             }
         }
 
+        //start live chart thread
         private void startCpuThread()
         {
             cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
@@ -76,6 +81,7 @@ namespace Task_Manager
             cpuThread.Start();
         }
 
+        //get cpu name
         private void cpu_name()
         {
             ManagementObjectSearcher win32Proc = new ManagementObjectSearcher("select * from Win32_Processor");
@@ -86,6 +92,7 @@ namespace Task_Manager
             }
         }
 
+        //get cpu core number
         private void cpu_core_number()
         {
             int coreCount = 0;
@@ -96,16 +103,30 @@ namespace Task_Manager
             core_number.Text = Convert.ToString(coreCount) + " Core";
         }
 
+        //get cpu processor number
         private void cpu_processor_number()
         {
             Process[] allProc = Process.GetProcesses();
             processor_number.Text = Convert.ToString(allProc.Length);
         }
 
+        //get cpu logical processor number
         private void logical_processor_number()
         {
             logic_pro_num.Text = Convert.ToString(Environment.ProcessorCount);
         }
 
+        //CPU current clock speed
+        uint currentsp, Maxsp;
+        private void currentClockSpeed()
+        {
+            var searcher = new ManagementObjectSearcher(
+            "select MaxClockSpeed from Win32_Processor");
+            foreach (var item in searcher.Get())
+            {
+                var clockSpeed = 0.001f * (uint)item["MaxClockSpeed"];
+                ClockSpeed.Text = Convert.ToString(clockSpeed) + " GHz";
+            }
+        }
     }
 }
