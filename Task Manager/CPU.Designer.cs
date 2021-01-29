@@ -30,9 +30,9 @@ namespace Task_Manager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.storage_main_title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cpuUsagePb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -45,15 +45,16 @@ namespace Task_Manager
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.logic_pro_num = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.processor_number = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.core_number = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cpu_main_name = new System.Windows.Forms.Label();
-            this.processor_number = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.logic_pro_num = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.chartCPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.cpuUsagePb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -83,6 +84,7 @@ namespace Task_Manager
             // 
             // cpuUsagePb
             // 
+            this.cpuUsagePb.BackColor = System.Drawing.Color.White;
             this.cpuUsagePb.Controls.Add(this.cpuUsageLabel);
             this.cpuUsagePb.FillThickness = 10;
             this.cpuUsagePb.Location = new System.Drawing.Point(71, 478);
@@ -107,6 +109,7 @@ namespace Task_Manager
             // 
             // cpuSpeedPb
             // 
+            this.cpuSpeedPb.BackColor = System.Drawing.Color.White;
             this.cpuSpeedPb.FillThickness = 10;
             this.cpuSpeedPb.Location = new System.Drawing.Point(328, 478);
             this.cpuSpeedPb.Name = "cpuSpeedPb";
@@ -128,6 +131,7 @@ namespace Task_Manager
             // 
             // cpuTempPb
             // 
+            this.cpuTempPb.BackColor = System.Drawing.Color.White;
             this.cpuTempPb.FillThickness = 10;
             this.cpuTempPb.Location = new System.Drawing.Point(585, 478);
             this.cpuTempPb.Name = "cpuTempPb";
@@ -180,6 +184,50 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(191, 384);
             this.guna2CustomGradientPanel2.TabIndex = 18;
             // 
+            // logic_pro_num
+            // 
+            this.logic_pro_num.AutoSize = true;
+            this.logic_pro_num.BackColor = System.Drawing.Color.Transparent;
+            this.logic_pro_num.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logic_pro_num.Location = new System.Drawing.Point(11, 150);
+            this.logic_pro_num.Name = "logic_pro_num";
+            this.logic_pro_num.Size = new System.Drawing.Size(53, 23);
+            this.logic_pro_num.TabIndex = 20;
+            this.logic_pro_num.Text = "name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(146, 23);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Logical Processor";
+            // 
+            // processor_number
+            // 
+            this.processor_number.AutoSize = true;
+            this.processor_number.BackColor = System.Drawing.Color.Transparent;
+            this.processor_number.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.processor_number.Location = new System.Drawing.Point(11, 91);
+            this.processor_number.Name = "processor_number";
+            this.processor_number.Size = new System.Drawing.Size(53, 23);
+            this.processor_number.TabIndex = 16;
+            this.processor_number.Text = "name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 23);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Process";
+            // 
             // core_number
             // 
             this.core_number.AutoSize = true;
@@ -213,50 +261,6 @@ namespace Task_Manager
             this.cpu_main_name.TabIndex = 12;
             this.cpu_main_name.Text = "name";
             // 
-            // processor_number
-            // 
-            this.processor_number.AutoSize = true;
-            this.processor_number.BackColor = System.Drawing.Color.Transparent;
-            this.processor_number.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.processor_number.Location = new System.Drawing.Point(11, 91);
-            this.processor_number.Name = "processor_number";
-            this.processor_number.Size = new System.Drawing.Size(53, 23);
-            this.processor_number.TabIndex = 16;
-            this.processor_number.Text = "name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 23);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Process";
-            // 
-            // logic_pro_num
-            // 
-            this.logic_pro_num.AutoSize = true;
-            this.logic_pro_num.BackColor = System.Drawing.Color.Transparent;
-            this.logic_pro_num.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logic_pro_num.Location = new System.Drawing.Point(11, 150);
-            this.logic_pro_num.Name = "logic_pro_num";
-            this.logic_pro_num.Size = new System.Drawing.Size(53, 23);
-            this.logic_pro_num.TabIndex = 20;
-            this.logic_pro_num.Text = "name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 127);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 23);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Logical Processor";
-            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
@@ -269,20 +273,29 @@ namespace Task_Manager
             // 
             // chartCPU
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartCPU.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartCPU.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartCPU.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartCPU.Legends.Add(legend1);
             this.chartCPU.Location = new System.Drawing.Point(3, 10);
             this.chartCPU.Name = "chartCPU";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "CPU";
-            this.chartCPU.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "CPU";
+            this.chartCPU.Series.Add(series1);
             this.chartCPU.Size = new System.Drawing.Size(534, 362);
             this.chartCPU.TabIndex = 20;
             this.chartCPU.Text = "chart1";
+            // 
+            // guna2CustomGradientPanel3
+            // 
+            this.guna2CustomGradientPanel3.BorderRadius = 20;
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(17, 470);
+            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
+            this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(750, 192);
+            this.guna2CustomGradientPanel3.TabIndex = 20;
             // 
             // CPU
             // 
@@ -300,6 +313,7 @@ namespace Task_Manager
             this.Controls.Add(this.cpuUsagePb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.storage_main_title);
+            this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Name = "CPU";
             this.Size = new System.Drawing.Size(789, 679);
             this.Load += new System.EventHandler(this.CPU_Load);
@@ -338,5 +352,6 @@ namespace Task_Manager
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCPU;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
     }
 }
