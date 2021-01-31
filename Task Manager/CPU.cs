@@ -44,7 +44,7 @@ namespace Task_Manager
             currentClockSpeed();
         }
 
-        //live update cpu usage chart
+        //live update cpu usage chart not accumulate, floating chart
         private void getPerformanceCounters()
         {
             var cpuPerfCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
