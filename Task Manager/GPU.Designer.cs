@@ -29,9 +29,9 @@ namespace Task_Manager
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.chartCPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -49,7 +49,7 @@ namespace Task_Manager
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.cpuTempPb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.cpu_main_name = new System.Windows.Forms.Label();
+            this.graphic_main_name = new System.Windows.Forms.Label();
             this.cpuSpeedPb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.cpuUsagePb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.cpuUsageLabel = new System.Windows.Forms.Label();
@@ -75,17 +75,17 @@ namespace Task_Manager
             // 
             // chartCPU
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chartCPU.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartCPU.Legends.Add(legend8);
+            chartArea1.Name = "ChartArea1";
+            this.chartCPU.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartCPU.Legends.Add(legend1);
             this.chartCPU.Location = new System.Drawing.Point(3, 10);
             this.chartCPU.Name = "chartCPU";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "CPU";
-            this.chartCPU.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "CPU";
+            this.chartCPU.Series.Add(series1);
             this.chartCPU.Size = new System.Drawing.Size(534, 362);
             this.chartCPU.TabIndex = 20;
             this.chartCPU.Text = "chart1";
@@ -262,16 +262,16 @@ namespace Task_Manager
             this.cpuTempPb.Size = new System.Drawing.Size(129, 128);
             this.cpuTempPb.TabIndex = 23;
             // 
-            // cpu_main_name
+            // graphic_main_name
             // 
-            this.cpu_main_name.AutoSize = true;
-            this.cpu_main_name.BackColor = System.Drawing.Color.Transparent;
-            this.cpu_main_name.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpu_main_name.Location = new System.Drawing.Point(243, 30);
-            this.cpu_main_name.Name = "cpu_main_name";
-            this.cpu_main_name.Size = new System.Drawing.Size(53, 23);
-            this.cpu_main_name.TabIndex = 26;
-            this.cpu_main_name.Text = "name";
+            this.graphic_main_name.AutoSize = true;
+            this.graphic_main_name.BackColor = System.Drawing.Color.Transparent;
+            this.graphic_main_name.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graphic_main_name.Location = new System.Drawing.Point(243, 30);
+            this.graphic_main_name.Name = "graphic_main_name";
+            this.graphic_main_name.Size = new System.Drawing.Size(53, 23);
+            this.graphic_main_name.TabIndex = 26;
+            this.graphic_main_name.Text = "name";
             // 
             // cpuSpeedPb
             // 
@@ -353,7 +353,7 @@ namespace Task_Manager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.cpu_main_name);
+            this.Controls.Add(this.graphic_main_name);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Name = "GPU";
             this.Size = new System.Drawing.Size(789, 679);
@@ -388,7 +388,7 @@ namespace Task_Manager
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpuTempPb;
-        private System.Windows.Forms.Label cpu_main_name;
+        private System.Windows.Forms.Label graphic_main_name;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpuSpeedPb;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpuUsagePb;
         private System.Windows.Forms.Label cpuUsageLabel;
