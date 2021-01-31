@@ -116,7 +116,7 @@ namespace Task_Manager
             logic_pro_num.Text = Convert.ToString(Environment.ProcessorCount);
         }
 
-        //CPU current clock speed
+        //CPU Max Clock Speed
         uint currentsp, Maxsp;
         private void currentClockSpeed()
         {
