@@ -18,6 +18,11 @@ namespace Task_Manager
             InitializeComponent();
         }
 
+        private void GPU_Load(object sender, EventArgs e)
+        {
+            GPUName();
+        }
+
         private void GPUName()
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_DisplayConfiguration");
@@ -36,5 +41,7 @@ namespace Task_Manager
                 }
             }
         }
+
+        
     }
 }

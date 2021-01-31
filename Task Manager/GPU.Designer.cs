@@ -357,6 +357,7 @@ namespace Task_Manager
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Name = "GPU";
             this.Size = new System.Drawing.Size(789, 679);
+            this.Load += new System.EventHandler(this.GPU_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
