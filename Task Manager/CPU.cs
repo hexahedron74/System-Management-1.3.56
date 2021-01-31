@@ -92,7 +92,7 @@ namespace Task_Manager
             }
         }
 
-        //get cpu core number
+        //get cpu core number 1
         private void cpu_core_number()
         {
             int coreCount = 0;
