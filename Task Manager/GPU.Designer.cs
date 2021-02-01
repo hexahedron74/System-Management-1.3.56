@@ -33,7 +33,7 @@ namespace Task_Manager
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.chartCPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartGPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace Task_Manager
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGPU)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.cpuUsagePb.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
@@ -66,29 +66,29 @@ namespace Task_Manager
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
-            this.guna2CustomGradientPanel1.Controls.Add(this.chartCPU);
+            this.guna2CustomGradientPanel1.Controls.Add(this.chartGPU);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(227, 68);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(540, 384);
             this.guna2CustomGradientPanel1.TabIndex = 28;
             // 
-            // chartCPU
+            // chartGPU
             // 
             chartArea1.Name = "ChartArea1";
-            this.chartCPU.ChartAreas.Add(chartArea1);
+            this.chartGPU.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chartCPU.Legends.Add(legend1);
-            this.chartCPU.Location = new System.Drawing.Point(3, 10);
-            this.chartCPU.Name = "chartCPU";
+            this.chartGPU.Legends.Add(legend1);
+            this.chartGPU.Location = new System.Drawing.Point(3, 10);
+            this.chartGPU.Name = "chartGPU";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "CPU";
-            this.chartCPU.Series.Add(series1);
-            this.chartCPU.Size = new System.Drawing.Size(534, 362);
-            this.chartCPU.TabIndex = 20;
-            this.chartCPU.Text = "chart1";
+            series1.Name = "GPU";
+            this.chartGPU.Series.Add(series1);
+            this.chartGPU.Size = new System.Drawing.Size(534, 362);
+            this.chartGPU.TabIndex = 20;
+            this.chartGPU.Text = "chart1";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -359,7 +359,7 @@ namespace Task_Manager
             this.Size = new System.Drawing.Size(789, 679);
             this.Load += new System.EventHandler(this.GPU_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGPU)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.cpuUsagePb.ResumeLayout(false);
@@ -373,7 +373,7 @@ namespace Task_Manager
 
         #endregion
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartCPU;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGPU;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
