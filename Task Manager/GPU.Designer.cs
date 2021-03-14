@@ -29,11 +29,7 @@ namespace Task_Manager
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.chartGPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -43,9 +39,9 @@ namespace Task_Manager
             this.label5 = new System.Windows.Forms.Label();
             this.logic_pro_num = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.processor_number = new System.Windows.Forms.Label();
+            this.driver_version = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.core_number = new System.Windows.Forms.Label();
+            this.device_id = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.cpuTempPb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -56,8 +52,6 @@ namespace Task_Manager
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartGPU)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.cpuUsagePb.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
@@ -66,29 +60,11 @@ namespace Task_Manager
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
-            this.guna2CustomGradientPanel1.Controls.Add(this.chartGPU);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(227, 68);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(540, 384);
             this.guna2CustomGradientPanel1.TabIndex = 28;
-            // 
-            // chartGPU
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGPU.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartGPU.Legends.Add(legend1);
-            this.chartGPU.Location = new System.Drawing.Point(3, 10);
-            this.chartGPU.Name = "chartGPU";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "GPU";
-            this.chartGPU.Series.Add(series1);
-            this.chartGPU.Size = new System.Drawing.Size(534, 362);
-            this.chartGPU.TabIndex = 20;
-            this.chartGPU.Text = "chart1";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -101,9 +77,9 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.Controls.Add(this.label5);
             this.guna2CustomGradientPanel2.Controls.Add(this.logic_pro_num);
             this.guna2CustomGradientPanel2.Controls.Add(this.label9);
-            this.guna2CustomGradientPanel2.Controls.Add(this.processor_number);
+            this.guna2CustomGradientPanel2.Controls.Add(this.driver_version);
             this.guna2CustomGradientPanel2.Controls.Add(this.label6);
-            this.guna2CustomGradientPanel2.Controls.Add(this.core_number);
+            this.guna2CustomGradientPanel2.Controls.Add(this.device_id);
             this.guna2CustomGradientPanel2.Controls.Add(this.label7);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(17, 68);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
@@ -199,16 +175,16 @@ namespace Task_Manager
             this.label9.TabIndex = 19;
             this.label9.Text = "Logical Processor";
             // 
-            // processor_number
+            // driver_version
             // 
-            this.processor_number.AutoSize = true;
-            this.processor_number.BackColor = System.Drawing.Color.Transparent;
-            this.processor_number.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.processor_number.Location = new System.Drawing.Point(11, 91);
-            this.processor_number.Name = "processor_number";
-            this.processor_number.Size = new System.Drawing.Size(53, 23);
-            this.processor_number.TabIndex = 16;
-            this.processor_number.Text = "name";
+            this.driver_version.AutoSize = true;
+            this.driver_version.BackColor = System.Drawing.Color.Transparent;
+            this.driver_version.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.driver_version.Location = new System.Drawing.Point(11, 91);
+            this.driver_version.Name = "driver_version";
+            this.driver_version.Size = new System.Drawing.Size(53, 23);
+            this.driver_version.TabIndex = 16;
+            this.driver_version.Text = "name";
             // 
             // label6
             // 
@@ -217,20 +193,20 @@ namespace Task_Manager
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 23);
+            this.label6.Size = new System.Drawing.Size(124, 23);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Process";
+            this.label6.Text = "Driver Version";
             // 
-            // core_number
+            // device_id
             // 
-            this.core_number.AutoSize = true;
-            this.core_number.BackColor = System.Drawing.Color.Transparent;
-            this.core_number.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.core_number.Location = new System.Drawing.Point(11, 33);
-            this.core_number.Name = "core_number";
-            this.core_number.Size = new System.Drawing.Size(53, 23);
-            this.core_number.TabIndex = 14;
-            this.core_number.Text = "name";
+            this.device_id.AutoSize = true;
+            this.device_id.BackColor = System.Drawing.Color.Transparent;
+            this.device_id.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.device_id.Location = new System.Drawing.Point(11, 33);
+            this.device_id.Name = "device_id";
+            this.device_id.Size = new System.Drawing.Size(53, 23);
+            this.device_id.TabIndex = 14;
+            this.device_id.Text = "name";
             // 
             // label7
             // 
@@ -239,9 +215,9 @@ namespace Task_Manager
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(11, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
+            this.label7.Size = new System.Drawing.Size(85, 23);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Core Number";
+            this.label7.Text = "Device ID";
             // 
             // guna2Separator1
             // 
@@ -358,8 +334,6 @@ namespace Task_Manager
             this.Name = "GPU";
             this.Size = new System.Drawing.Size(789, 679);
             this.Load += new System.EventHandler(this.GPU_Load);
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartGPU)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.cpuUsagePb.ResumeLayout(false);
@@ -373,7 +347,6 @@ namespace Task_Manager
 
         #endregion
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartGPU;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -383,9 +356,9 @@ namespace Task_Manager
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label logic_pro_num;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label processor_number;
+        private System.Windows.Forms.Label driver_version;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label core_number;
+        private System.Windows.Forms.Label device_id;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpuTempPb;

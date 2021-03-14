@@ -1,6 +1,7 @@
 ﻿using Hardware.Info;
 using System;
 using System.Management;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Task_Manager
@@ -24,9 +25,20 @@ namespace Task_Manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            using (waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
             // mainFormTimer.Start();
             GetBatteryInfo();
             GetCpuTemperature();
+
+        }
+
+        void SaveData()
+        {
+            for (int i = 0; i <= 100; i++)
+                Thread.Sleep(3);
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -91,6 +103,10 @@ namespace Task_Manager
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            using(waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
             dashboard1.Show();
             cpu1.Hide();
             gpu1.Hide();
@@ -99,10 +115,15 @@ namespace Task_Manager
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            
             cpu1.Show();
             cpu1.BringToFront();
             dashboard1.Hide();
             gpu1.Hide();
+            using (waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -111,7 +132,10 @@ namespace Task_Manager
             gpu1.BringToFront();
             dashboard1.Hide();
             cpu1.Hide();
-
+            using (waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
         }
 
     }

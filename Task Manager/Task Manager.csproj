@@ -135,6 +135,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="waitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="waitForm.Designer.cs">
+      <DependentUpon>waitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GPU.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +188,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="waitForm.resx">
+      <DependentUpon>waitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

@@ -25,7 +25,7 @@ namespace Task_Manager
         private void GPU_Load(object sender, EventArgs e)
         {
             GPUName();
-            startGpuThread();
+            GPU_Device_ID();
         }
         
         private void GPUName()
@@ -47,42 +47,28 @@ namespace Task_Manager
             }
         }
 
-        //live update cpu usage chart not accumulate, floating chart
-        private void getPerformanceCounters()
+        private void GPU_Device_ID()
         {
-            var GpuPerfCounter = new PerformanceCounter("NVIDIA GPU", "% GPU Usage", "#0 Quadro K1100M(id=1, NVAPI ID=256)");
-            while (true)
+            using (var searcher = new ManagementObjectSearcher("select * from Win32_VideoController"))
             {
-                gpuArray[gpuArray.Length - 1] = Math.Round(GpuPerfCounter.NextValue(), 0);
-                Array.Copy(gpuArray, 1, gpuArray, 0, gpuArray.Length - 1);
-                if (chartGPU.IsHandleCreated)
+                foreach (ManagementObject obj in searcher.Get())
                 {
-                    this.Invoke((MethodInvoker)delegate { UpdateGpuChart(); });
+                    device_id.Text = obj["Name"]+"";
                 }
-                else
-                {
-
-                }
-                Thread.Sleep(1000);//thread 1 second
             }
         }
 
-        private void UpdateGpuChart()
+        private void GPU_Driver_Version()
         {
-            chartGPU.Series["GPU"].Points.Clear();
-            for (int i = 0; i < gpuArray.Length - 1; ++i)
+            using (var searcher = new ManagementObjectSearcher("select * from Win32_VideoController"))
             {
-                chartGPU.Series["GPU"].Points.AddY(gpuArray[i]);
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    driver_version.Text = obj["DriverVersion"] + "";
+                }
             }
         }
 
-        //start live chart thread
-        private void startGpuThread()
-        {
-            gpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
-            gpuThread.IsBackground = true;
-            gpuThread.Start();
-        }
 
     }
 }
