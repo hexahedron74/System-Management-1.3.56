@@ -37,18 +37,10 @@ namespace Task_Manager
             this.label1 = new System.Windows.Forms.Label();
             this.cpuUsagePb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.cpuUsageLabel = new System.Windows.Forms.Label();
-            this.cpuSpeedPb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cpuTempPb = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.ClockSpeed = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.logic_pro_num = new System.Windows.Forms.Label();
@@ -84,7 +76,7 @@ namespace Task_Manager
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 618);
+            this.label1.Location = new System.Drawing.Point(332, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 19);
             this.label1.TabIndex = 5;
@@ -95,7 +87,7 @@ namespace Task_Manager
             this.cpuUsagePb.BackColor = System.Drawing.Color.White;
             this.cpuUsagePb.Controls.Add(this.cpuUsageLabel);
             this.cpuUsagePb.FillThickness = 10;
-            this.cpuUsagePb.Location = new System.Drawing.Point(71, 478);
+            this.cpuUsagePb.Location = new System.Drawing.Point(306, 22);
             this.cpuUsagePb.Name = "cpuUsagePb";
             this.cpuUsagePb.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(206)))));
             this.cpuUsagePb.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(206)))));
@@ -114,52 +106,6 @@ namespace Task_Manager
             this.cpuUsageLabel.Size = new System.Drawing.Size(57, 19);
             this.cpuUsageLabel.TabIndex = 10;
             this.cpuUsageLabel.Text = "00:00%";
-            // 
-            // cpuSpeedPb
-            // 
-            this.cpuSpeedPb.BackColor = System.Drawing.Color.White;
-            this.cpuSpeedPb.FillThickness = 10;
-            this.cpuSpeedPb.Location = new System.Drawing.Point(328, 478);
-            this.cpuSpeedPb.Name = "cpuSpeedPb";
-            this.cpuSpeedPb.ProgressThickness = 10;
-            this.cpuSpeedPb.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.cpuSpeedPb.ShadowDecoration.Parent = this.cpuSpeedPb;
-            this.cpuSpeedPb.Size = new System.Drawing.Size(129, 128);
-            this.cpuSpeedPb.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Core Speed";
-            // 
-            // cpuTempPb
-            // 
-            this.cpuTempPb.BackColor = System.Drawing.Color.White;
-            this.cpuTempPb.FillThickness = 10;
-            this.cpuTempPb.Location = new System.Drawing.Point(585, 478);
-            this.cpuTempPb.Name = "cpuTempPb";
-            this.cpuTempPb.ProgressThickness = 10;
-            this.cpuTempPb.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.cpuTempPb.ShadowDecoration.Parent = this.cpuTempPb;
-            this.cpuTempPb.Size = new System.Drawing.Size(129, 128);
-            this.cpuTempPb.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(587, 618);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "CPU Temperature";
             // 
             // guna2Separator1
             // 
@@ -182,10 +128,6 @@ namespace Task_Manager
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 20;
-            this.guna2CustomGradientPanel2.Controls.Add(this.label11);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label12);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label8);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label10);
             this.guna2CustomGradientPanel2.Controls.Add(this.ClockSpeed);
             this.guna2CustomGradientPanel2.Controls.Add(this.label5);
             this.guna2CustomGradientPanel2.Controls.Add(this.logic_pro_num);
@@ -199,50 +141,6 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(191, 384);
             this.guna2CustomGradientPanel2.TabIndex = 18;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 341);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 23);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "name";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(11, 318);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 23);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Logical Processor";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 281);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 23);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "name";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 258);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 23);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Logical Processor";
             // 
             // ClockSpeed
             // 
@@ -373,7 +271,8 @@ namespace Task_Manager
             // guna2CustomGradientPanel3
             // 
             this.guna2CustomGradientPanel3.BorderRadius = 20;
-            this.guna2CustomGradientPanel3.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel3.Controls.Add(this.cpuUsagePb);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label1);
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(17, 470);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
@@ -388,12 +287,7 @@ namespace Task_Manager
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.cpuTempPb);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.cpu_main_name);
-            this.Controls.Add(this.cpuSpeedPb);
-            this.Controls.Add(this.cpuUsagePb);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.storage_main_title);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Name = "CPU";
@@ -418,10 +312,6 @@ namespace Task_Manager
         private System.Windows.Forms.Label storage_main_title;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpuUsagePb;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar cpuSpeedPb;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar cpuTempPb;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label cpuUsageLabel;
         private System.Windows.Forms.Timer timer1;
@@ -437,10 +327,6 @@ namespace Task_Manager
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCPU;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label ClockSpeed;
         private System.Windows.Forms.Label label5;
     }

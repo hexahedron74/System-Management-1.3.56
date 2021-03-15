@@ -135,6 +135,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Developer.Designer.cs">
+      <DependentUpon>Developer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowToUse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HowToUse.Designer.cs">
+      <DependentUpon>HowToUse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="License.Designer.cs">
+      <DependentUpon>License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listBoxStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="waitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +188,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Developer.resx">
+      <DependentUpon>Developer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GPU.resx">
       <DependentUpon>GPU.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +199,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToUse.resx">
+      <DependentUpon>HowToUse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License.resx">
+      <DependentUpon>License.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

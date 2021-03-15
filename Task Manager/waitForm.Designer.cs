@@ -64,6 +64,7 @@ namespace Task_Manager
             this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DragForm = false;
+            this.guna2BorderlessForm1.HasFormShadow = false;
             // 
             // waitForm
             // 

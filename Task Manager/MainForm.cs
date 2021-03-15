@@ -25,10 +25,6 @@ namespace Task_Manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (waitForm form = new waitForm(SaveData))
-            {
-                form.ShowDialog(this);
-            }
             // mainFormTimer.Start();
             GetBatteryInfo();
             GetCpuTemperature();
@@ -101,7 +97,7 @@ namespace Task_Manager
             Application.Exit();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void dashBoardBtn_Click(object sender, EventArgs e)
         {
             using(waitForm form = new waitForm(SaveData))
             {
@@ -110,33 +106,63 @@ namespace Task_Manager
             dashboard1.Show();
             cpu1.Hide();
             gpu1.Hide();
+            developer1.Hide();
             dashboard1.BringToFront();
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void cpuBtn_Click(object sender, EventArgs e)
         {
             
             cpu1.Show();
             cpu1.BringToFront();
             dashboard1.Hide();
             gpu1.Hide();
+            developer1.Hide();
             using (waitForm form = new waitForm(SaveData))
             {
                 form.ShowDialog(this);
             }
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void gpuBtn_Click(object sender, EventArgs e)
         {
             gpu1.Show();
             gpu1.BringToFront();
             dashboard1.Hide();
             cpu1.Hide();
+            developer1.Hide();
             using (waitForm form = new waitForm(SaveData))
             {
                 form.ShowDialog(this);
             }
         }
 
+        private void developerBtn_Click(object sender, EventArgs e)
+        {
+            using (waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
+            developer1.Show();
+            developer1.BringToFront();
+            dashboard1.Hide();
+            cpu1.Hide();
+            gpu1.Hide();
+            
+        }
+
+        private void licenseBtn_Click(object sender, EventArgs e)
+        {
+            using (waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
+            license1.Show();
+            license1.BringToFront();
+            dashboard1.Hide();
+            developer1.Hide();
+            cpu1.Hide();
+            gpu1.Hide();
+        }
     }
 }

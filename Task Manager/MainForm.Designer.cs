@@ -34,20 +34,26 @@ namespace Task_Manager
             this.formControlPanel = new System.Windows.Forms.Panel();
             this.exit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.navBarPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.uiLb_CDrive = new System.Windows.Forms.Label();
+            this.versionLabel = new System.Windows.Forms.Label();
+            this.allProgramBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.developerBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.licenseBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.howToUseBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ATLabel = new System.Windows.Forms.Label();
+            this.PMLabel = new System.Windows.Forms.Label();
+            this.memoryBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.gpuBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.cpuBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.dashBoardBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.systemLabel = new System.Windows.Forms.Label();
             this.programMainTitle = new System.Windows.Forms.Label();
             this.statiticsPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.cpuTempPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.cpuClockLabel = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.batteryPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.statistics_betteryLeft_subtitle = new System.Windows.Forms.Label();
             this.statistics_battery_subtitle = new System.Windows.Forms.Label();
             this.statistics_battery = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -57,15 +63,17 @@ namespace Task_Manager
             this.mainFormTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.cpuClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.developer1 = new Task_Manager.Developer();
             this.dashboard1 = new Task_Manager.dashboard();
             this.cpu1 = new Task_Manager.CPU();
             this.gpu1 = new Task_Manager.GPU();
+            this.license1 = new Task_Manager.License();
             this.formControlPanel.SuspendLayout();
             this.navBarPanel.SuspendLayout();
             this.statiticsPanel.SuspendLayout();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.cpuTempPanel.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
-            this.guna2CustomGradientPanel6.SuspendLayout();
+            this.batteryPanel.SuspendLayout();
             this.statistics_battery.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,12 +111,18 @@ namespace Task_Manager
             // navBarPanel
             // 
             this.navBarPanel.BackColor = System.Drawing.Color.White;
-            this.navBarPanel.Controls.Add(this.label3);
-            this.navBarPanel.Controls.Add(this.guna2Button4);
-            this.navBarPanel.Controls.Add(this.guna2Button3);
-            this.navBarPanel.Controls.Add(this.guna2Button2);
-            this.navBarPanel.Controls.Add(this.guna2Button1);
-            this.navBarPanel.Controls.Add(this.uiLb_CDrive);
+            this.navBarPanel.Controls.Add(this.versionLabel);
+            this.navBarPanel.Controls.Add(this.allProgramBtn);
+            this.navBarPanel.Controls.Add(this.developerBtn);
+            this.navBarPanel.Controls.Add(this.licenseBtn);
+            this.navBarPanel.Controls.Add(this.howToUseBtn);
+            this.navBarPanel.Controls.Add(this.ATLabel);
+            this.navBarPanel.Controls.Add(this.PMLabel);
+            this.navBarPanel.Controls.Add(this.memoryBtn);
+            this.navBarPanel.Controls.Add(this.gpuBtn);
+            this.navBarPanel.Controls.Add(this.cpuBtn);
+            this.navBarPanel.Controls.Add(this.dashBoardBtn);
+            this.navBarPanel.Controls.Add(this.systemLabel);
             this.navBarPanel.Controls.Add(this.programMainTitle);
             this.navBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarPanel.Location = new System.Drawing.Point(0, 32);
@@ -117,126 +131,247 @@ namespace Task_Manager
             this.navBarPanel.Size = new System.Drawing.Size(179, 679);
             this.navBarPanel.TabIndex = 1;
             // 
-            // label3
+            // versionLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(32, 330);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 15);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "PROGRAM MANAGE";
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.versionLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.versionLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.versionLabel.Location = new System.Drawing.Point(12, 659);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(140, 15);
+            this.versionLabel.TabIndex = 27;
+            this.versionLabel.Text = "V 1.3.56 Syntaxack Team";
             // 
-            // guna2Button4
+            // allProgramBtn
             // 
-            this.guna2Button4.BorderRadius = 15;
-            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button4.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(35, 274);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(141, 32);
-            this.guna2Button4.TabIndex = 20;
-            this.guna2Button4.Text = "Memory";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.allProgramBtn.BorderRadius = 15;
+            this.allProgramBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.allProgramBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.allProgramBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.allProgramBtn.CheckedState.Parent = this.allProgramBtn;
+            this.allProgramBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.allProgramBtn.CustomImages.Parent = this.allProgramBtn;
+            this.allProgramBtn.FillColor = System.Drawing.Color.Transparent;
+            this.allProgramBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allProgramBtn.ForeColor = System.Drawing.Color.Black;
+            this.allProgramBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.allProgramBtn.HoverState.Parent = this.allProgramBtn;
+            this.allProgramBtn.Image = ((System.Drawing.Image)(resources.GetObject("allProgramBtn.Image")));
+            this.allProgramBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.allProgramBtn.Location = new System.Drawing.Point(35, 348);
+            this.allProgramBtn.Name = "allProgramBtn";
+            this.allProgramBtn.ShadowDecoration.Parent = this.allProgramBtn;
+            this.allProgramBtn.Size = new System.Drawing.Size(141, 32);
+            this.allProgramBtn.TabIndex = 26;
+            this.allProgramBtn.Text = "All Program";
+            this.allProgramBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button3
+            // developerBtn
             // 
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button3.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(35, 236);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(141, 32);
-            this.guna2Button3.TabIndex = 19;
-            this.guna2Button3.Text = "GPU";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.developerBtn.BorderRadius = 15;
+            this.developerBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.developerBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.developerBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.developerBtn.CheckedState.Parent = this.developerBtn;
+            this.developerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.developerBtn.CustomImages.Parent = this.developerBtn;
+            this.developerBtn.FillColor = System.Drawing.Color.Transparent;
+            this.developerBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.developerBtn.ForeColor = System.Drawing.Color.Black;
+            this.developerBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.developerBtn.HoverState.Parent = this.developerBtn;
+            this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
+            this.developerBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.developerBtn.Location = new System.Drawing.Point(35, 524);
+            this.developerBtn.Name = "developerBtn";
+            this.developerBtn.ShadowDecoration.Parent = this.developerBtn;
+            this.developerBtn.Size = new System.Drawing.Size(141, 32);
+            this.developerBtn.TabIndex = 25;
+            this.developerBtn.Text = "Developer";
+            this.developerBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
             // 
-            // guna2Button2
+            // licenseBtn
             // 
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(35, 198);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(141, 32);
-            this.guna2Button2.TabIndex = 18;
-            this.guna2Button2.Text = "CPU";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.licenseBtn.BorderRadius = 15;
+            this.licenseBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.licenseBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.licenseBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.licenseBtn.CheckedState.Parent = this.licenseBtn;
+            this.licenseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.licenseBtn.CustomImages.Parent = this.licenseBtn;
+            this.licenseBtn.FillColor = System.Drawing.Color.Transparent;
+            this.licenseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.licenseBtn.ForeColor = System.Drawing.Color.Black;
+            this.licenseBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.licenseBtn.HoverState.Parent = this.licenseBtn;
+            this.licenseBtn.Image = ((System.Drawing.Image)(resources.GetObject("licenseBtn.Image")));
+            this.licenseBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.licenseBtn.Location = new System.Drawing.Point(35, 486);
+            this.licenseBtn.Name = "licenseBtn";
+            this.licenseBtn.ShadowDecoration.Parent = this.licenseBtn;
+            this.licenseBtn.Size = new System.Drawing.Size(141, 32);
+            this.licenseBtn.TabIndex = 24;
+            this.licenseBtn.Text = "License";
+            this.licenseBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.licenseBtn.Click += new System.EventHandler(this.licenseBtn_Click);
             // 
-            // guna2Button1
+            // howToUseBtn
             // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.Checked = true;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(35, 160);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(141, 32);
-            this.guna2Button1.TabIndex = 17;
-            this.guna2Button1.Text = "Dashboard";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.howToUseBtn.BorderRadius = 15;
+            this.howToUseBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.howToUseBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.howToUseBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.howToUseBtn.CheckedState.Parent = this.howToUseBtn;
+            this.howToUseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.howToUseBtn.CustomImages.Parent = this.howToUseBtn;
+            this.howToUseBtn.FillColor = System.Drawing.Color.Transparent;
+            this.howToUseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.howToUseBtn.ForeColor = System.Drawing.Color.Black;
+            this.howToUseBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.howToUseBtn.HoverState.Parent = this.howToUseBtn;
+            this.howToUseBtn.Image = ((System.Drawing.Image)(resources.GetObject("howToUseBtn.Image")));
+            this.howToUseBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.howToUseBtn.Location = new System.Drawing.Point(35, 448);
+            this.howToUseBtn.Name = "howToUseBtn";
+            this.howToUseBtn.ShadowDecoration.Parent = this.howToUseBtn;
+            this.howToUseBtn.Size = new System.Drawing.Size(141, 32);
+            this.howToUseBtn.TabIndex = 23;
+            this.howToUseBtn.Text = "How To Use";
+            this.howToUseBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // uiLb_CDrive
+            // ATLabel
             // 
-            this.uiLb_CDrive.AutoSize = true;
-            this.uiLb_CDrive.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLb_CDrive.ForeColor = System.Drawing.Color.DimGray;
-            this.uiLb_CDrive.Location = new System.Drawing.Point(32, 129);
-            this.uiLb_CDrive.Name = "uiLb_CDrive";
-            this.uiLb_CDrive.Size = new System.Drawing.Size(48, 15);
-            this.uiLb_CDrive.TabIndex = 13;
-            this.uiLb_CDrive.Text = "SYSTEM";
+            this.ATLabel.AutoSize = true;
+            this.ATLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.ATLabel.Location = new System.Drawing.Point(32, 430);
+            this.ATLabel.Name = "ATLabel";
+            this.ATLabel.Size = new System.Drawing.Size(95, 15);
+            this.ATLabel.TabIndex = 22;
+            this.ATLabel.Text = "ADDITIONAL TAB";
+            // 
+            // PMLabel
+            // 
+            this.PMLabel.AutoSize = true;
+            this.PMLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.PMLabel.Location = new System.Drawing.Point(32, 330);
+            this.PMLabel.Name = "PMLabel";
+            this.PMLabel.Size = new System.Drawing.Size(113, 15);
+            this.PMLabel.TabIndex = 21;
+            this.PMLabel.Text = "PROGRAM MANAGE";
+            // 
+            // memoryBtn
+            // 
+            this.memoryBtn.BorderRadius = 15;
+            this.memoryBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.memoryBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.memoryBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.memoryBtn.CheckedState.Parent = this.memoryBtn;
+            this.memoryBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.memoryBtn.CustomImages.Parent = this.memoryBtn;
+            this.memoryBtn.FillColor = System.Drawing.Color.Transparent;
+            this.memoryBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memoryBtn.ForeColor = System.Drawing.Color.Black;
+            this.memoryBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.memoryBtn.HoverState.Parent = this.memoryBtn;
+            this.memoryBtn.Image = ((System.Drawing.Image)(resources.GetObject("memoryBtn.Image")));
+            this.memoryBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.memoryBtn.Location = new System.Drawing.Point(35, 274);
+            this.memoryBtn.Name = "memoryBtn";
+            this.memoryBtn.ShadowDecoration.Parent = this.memoryBtn;
+            this.memoryBtn.Size = new System.Drawing.Size(141, 32);
+            this.memoryBtn.TabIndex = 20;
+            this.memoryBtn.Text = "Memory";
+            this.memoryBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // gpuBtn
+            // 
+            this.gpuBtn.BorderRadius = 15;
+            this.gpuBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gpuBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.gpuBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.gpuBtn.CheckedState.Parent = this.gpuBtn;
+            this.gpuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gpuBtn.CustomImages.Parent = this.gpuBtn;
+            this.gpuBtn.FillColor = System.Drawing.Color.Transparent;
+            this.gpuBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpuBtn.ForeColor = System.Drawing.Color.Black;
+            this.gpuBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.gpuBtn.HoverState.Parent = this.gpuBtn;
+            this.gpuBtn.Image = ((System.Drawing.Image)(resources.GetObject("gpuBtn.Image")));
+            this.gpuBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gpuBtn.Location = new System.Drawing.Point(35, 236);
+            this.gpuBtn.Name = "gpuBtn";
+            this.gpuBtn.ShadowDecoration.Parent = this.gpuBtn;
+            this.gpuBtn.Size = new System.Drawing.Size(141, 32);
+            this.gpuBtn.TabIndex = 19;
+            this.gpuBtn.Text = "GPU";
+            this.gpuBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gpuBtn.Click += new System.EventHandler(this.gpuBtn_Click);
+            // 
+            // cpuBtn
+            // 
+            this.cpuBtn.BorderRadius = 15;
+            this.cpuBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.cpuBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.cpuBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.cpuBtn.CheckedState.Parent = this.cpuBtn;
+            this.cpuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cpuBtn.CustomImages.Parent = this.cpuBtn;
+            this.cpuBtn.FillColor = System.Drawing.Color.Transparent;
+            this.cpuBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpuBtn.ForeColor = System.Drawing.Color.Black;
+            this.cpuBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.cpuBtn.HoverState.Parent = this.cpuBtn;
+            this.cpuBtn.Image = ((System.Drawing.Image)(resources.GetObject("cpuBtn.Image")));
+            this.cpuBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.cpuBtn.Location = new System.Drawing.Point(35, 198);
+            this.cpuBtn.Name = "cpuBtn";
+            this.cpuBtn.ShadowDecoration.Parent = this.cpuBtn;
+            this.cpuBtn.Size = new System.Drawing.Size(141, 32);
+            this.cpuBtn.TabIndex = 18;
+            this.cpuBtn.Text = "CPU";
+            this.cpuBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.cpuBtn.Click += new System.EventHandler(this.cpuBtn_Click);
+            // 
+            // dashBoardBtn
+            // 
+            this.dashBoardBtn.BorderRadius = 15;
+            this.dashBoardBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.dashBoardBtn.Checked = true;
+            this.dashBoardBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.dashBoardBtn.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.dashBoardBtn.CheckedState.Parent = this.dashBoardBtn;
+            this.dashBoardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashBoardBtn.CustomImages.Parent = this.dashBoardBtn;
+            this.dashBoardBtn.FillColor = System.Drawing.Color.Transparent;
+            this.dashBoardBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashBoardBtn.ForeColor = System.Drawing.Color.Black;
+            this.dashBoardBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.dashBoardBtn.HoverState.Parent = this.dashBoardBtn;
+            this.dashBoardBtn.Image = ((System.Drawing.Image)(resources.GetObject("dashBoardBtn.Image")));
+            this.dashBoardBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dashBoardBtn.Location = new System.Drawing.Point(35, 160);
+            this.dashBoardBtn.Name = "dashBoardBtn";
+            this.dashBoardBtn.ShadowDecoration.Parent = this.dashBoardBtn;
+            this.dashBoardBtn.Size = new System.Drawing.Size(141, 32);
+            this.dashBoardBtn.TabIndex = 17;
+            this.dashBoardBtn.Text = "Dashboard";
+            this.dashBoardBtn.Click += new System.EventHandler(this.dashBoardBtn_Click);
+            // 
+            // systemLabel
+            // 
+            this.systemLabel.AutoSize = true;
+            this.systemLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.systemLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.systemLabel.Location = new System.Drawing.Point(32, 129);
+            this.systemLabel.Name = "systemLabel";
+            this.systemLabel.Size = new System.Drawing.Size(48, 15);
+            this.systemLabel.TabIndex = 13;
+            this.systemLabel.Text = "SYSTEM";
             // 
             // programMainTitle
             // 
@@ -254,8 +389,8 @@ namespace Task_Manager
             // statiticsPanel
             // 
             this.statiticsPanel.BackColor = System.Drawing.Color.White;
-            this.statiticsPanel.Controls.Add(this.guna2CustomGradientPanel1);
-            this.statiticsPanel.Controls.Add(this.guna2CustomGradientPanel6);
+            this.statiticsPanel.Controls.Add(this.cpuTempPanel);
+            this.statiticsPanel.Controls.Add(this.batteryPanel);
             this.statiticsPanel.Controls.Add(this.statisticsTabMainTitle);
             this.statiticsPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.statiticsPanel.Location = new System.Drawing.Point(968, 32);
@@ -264,22 +399,22 @@ namespace Task_Manager
             this.statiticsPanel.Size = new System.Drawing.Size(266, 679);
             this.statiticsPanel.TabIndex = 2;
             // 
-            // guna2CustomGradientPanel1
+            // cpuTempPanel
             // 
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.BorderRadius = 20;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CircleProgressBar1);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(15, 160);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(239, 62);
-            this.guna2CustomGradientPanel1.TabIndex = 15;
+            this.cpuTempPanel.BackColor = System.Drawing.Color.Transparent;
+            this.cpuTempPanel.BorderRadius = 20;
+            this.cpuTempPanel.Controls.Add(this.label1);
+            this.cpuTempPanel.Controls.Add(this.label2);
+            this.cpuTempPanel.Controls.Add(this.guna2CircleProgressBar1);
+            this.cpuTempPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.cpuTempPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.cpuTempPanel.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.cpuTempPanel.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.cpuTempPanel.Location = new System.Drawing.Point(15, 160);
+            this.cpuTempPanel.Name = "cpuTempPanel";
+            this.cpuTempPanel.ShadowDecoration.Parent = this.cpuTempPanel;
+            this.cpuTempPanel.Size = new System.Drawing.Size(239, 62);
+            this.cpuTempPanel.TabIndex = 15;
             // 
             // label1
             // 
@@ -334,22 +469,22 @@ namespace Task_Manager
             this.cpuClockLabel.TabIndex = 11;
             this.cpuClockLabel.Text = "000";
             // 
-            // guna2CustomGradientPanel6
+            // batteryPanel
             // 
-            this.guna2CustomGradientPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel6.BorderRadius = 20;
-            this.guna2CustomGradientPanel6.Controls.Add(this.statistics_betteryLeft_subtitle);
-            this.guna2CustomGradientPanel6.Controls.Add(this.statistics_battery_subtitle);
-            this.guna2CustomGradientPanel6.Controls.Add(this.statistics_battery);
-            this.guna2CustomGradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel6.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel6.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(15, 82);
-            this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
-            this.guna2CustomGradientPanel6.ShadowDecoration.Parent = this.guna2CustomGradientPanel6;
-            this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(239, 62);
-            this.guna2CustomGradientPanel6.TabIndex = 14;
+            this.batteryPanel.BackColor = System.Drawing.Color.Transparent;
+            this.batteryPanel.BorderRadius = 20;
+            this.batteryPanel.Controls.Add(this.statistics_betteryLeft_subtitle);
+            this.batteryPanel.Controls.Add(this.statistics_battery_subtitle);
+            this.batteryPanel.Controls.Add(this.statistics_battery);
+            this.batteryPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.batteryPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.batteryPanel.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.batteryPanel.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.batteryPanel.Location = new System.Drawing.Point(15, 82);
+            this.batteryPanel.Name = "batteryPanel";
+            this.batteryPanel.ShadowDecoration.Parent = this.batteryPanel;
+            this.batteryPanel.Size = new System.Drawing.Size(239, 62);
+            this.batteryPanel.TabIndex = 14;
             // 
             // statistics_betteryLeft_subtitle
             // 
@@ -430,6 +565,15 @@ namespace Task_Manager
             this.guna2ShadowForm1.BorderRadius = 20;
             this.guna2ShadowForm1.TargetForm = this;
             // 
+            // developer1
+            // 
+            this.developer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.developer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.developer1.Location = new System.Drawing.Point(179, 32);
+            this.developer1.Name = "developer1";
+            this.developer1.Size = new System.Drawing.Size(789, 679);
+            this.developer1.TabIndex = 6;
+            // 
             // dashboard1
             // 
             this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
@@ -457,12 +601,23 @@ namespace Task_Manager
             this.gpu1.Size = new System.Drawing.Size(1234, 711);
             this.gpu1.TabIndex = 5;
             // 
+            // license1
+            // 
+            this.license1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.license1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.license1.Location = new System.Drawing.Point(179, 32);
+            this.license1.Name = "license1";
+            this.license1.Size = new System.Drawing.Size(789, 679);
+            this.license1.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1234, 711);
+            this.Controls.Add(this.license1);
+            this.Controls.Add(this.developer1);
             this.Controls.Add(this.dashboard1);
             this.Controls.Add(this.statiticsPanel);
             this.Controls.Add(this.navBarPanel);
@@ -480,12 +635,12 @@ namespace Task_Manager
             this.navBarPanel.PerformLayout();
             this.statiticsPanel.ResumeLayout(false);
             this.statiticsPanel.PerformLayout();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
+            this.cpuTempPanel.ResumeLayout(false);
+            this.cpuTempPanel.PerformLayout();
             this.guna2CircleProgressBar1.ResumeLayout(false);
             this.guna2CircleProgressBar1.PerformLayout();
-            this.guna2CustomGradientPanel6.ResumeLayout(false);
-            this.guna2CustomGradientPanel6.PerformLayout();
+            this.batteryPanel.ResumeLayout(false);
+            this.batteryPanel.PerformLayout();
             this.statistics_battery.ResumeLayout(false);
             this.statistics_battery.PerformLayout();
             this.ResumeLayout(false);
@@ -498,30 +653,38 @@ namespace Task_Manager
         private System.Windows.Forms.Panel formControlPanel;
         private System.Windows.Forms.Label statisticsTabMainTitle;
         private System.Windows.Forms.Label programMainTitle;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel batteryPanel;
         private System.Windows.Forms.Label statistics_betteryLeft_subtitle;
         private System.Windows.Forms.Label statistics_battery_subtitle;
         private Guna.UI2.WinForms.Guna2CircleProgressBar statistics_battery;
         private System.Windows.Forms.Label statitics_batterySize;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Timer mainFormTimer;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel cpuTempPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private System.Windows.Forms.Label cpuClockLabel;
-        private System.Windows.Forms.Label uiLb_CDrive;
+        private System.Windows.Forms.Label systemLabel;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label PMLabel;
+        private Guna.UI2.WinForms.Guna2Button memoryBtn;
+        private Guna.UI2.WinForms.Guna2Button gpuBtn;
+        private Guna.UI2.WinForms.Guna2Button cpuBtn;
+        private Guna.UI2.WinForms.Guna2Button dashBoardBtn;
         private Guna.UI2.WinForms.Guna2CircleButton exit;
         private dashboard dashboard1;
         private CPU cpu1;
         private GPU gpu1;
         private System.Windows.Forms.Timer cpuClockTimer;
+        private System.Windows.Forms.Label versionLabel;
+        private Guna.UI2.WinForms.Guna2Button allProgramBtn;
+        private Guna.UI2.WinForms.Guna2Button developerBtn;
+        private Guna.UI2.WinForms.Guna2Button licenseBtn;
+        private Guna.UI2.WinForms.Guna2Button howToUseBtn;
+        private System.Windows.Forms.Label ATLabel;
+        private Developer developer1;
+        private License license1;
     }
 }
 
