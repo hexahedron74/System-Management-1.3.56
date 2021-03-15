@@ -106,6 +106,7 @@ namespace Task_Manager
             dashboard1.Show();
             cpu1.Hide();
             gpu1.Hide();
+            howToUse1.Hide();
             developer1.Hide();
             dashboard1.BringToFront();
         }
@@ -117,6 +118,7 @@ namespace Task_Manager
             cpu1.BringToFront();
             dashboard1.Hide();
             gpu1.Hide();
+            howToUse1.Hide();
             developer1.Hide();
             using (waitForm form = new waitForm(SaveData))
             {
@@ -131,6 +133,7 @@ namespace Task_Manager
             dashboard1.Hide();
             cpu1.Hide();
             developer1.Hide();
+            howToUse1.Hide();
             using (waitForm form = new waitForm(SaveData))
             {
                 form.ShowDialog(this);
@@ -148,7 +151,7 @@ namespace Task_Manager
             dashboard1.Hide();
             cpu1.Hide();
             gpu1.Hide();
-            
+            howToUse1.Hide();
         }
 
         private void licenseBtn_Click(object sender, EventArgs e)
@@ -159,6 +162,22 @@ namespace Task_Manager
             }
             license1.Show();
             license1.BringToFront();
+            dashboard1.Hide();
+            developer1.Hide();
+            cpu1.Hide();
+            gpu1.Hide();
+            howToUse1.Hide();
+        }
+
+        private void howToUseBtn_Click(object sender, EventArgs e)
+        {
+            using (waitForm form = new waitForm(SaveData))
+            {
+                form.ShowDialog(this);
+            }
+            howToUse1.Show();
+            howToUse1.BringToFront();
+            license1.Hide();
             dashboard1.Hide();
             developer1.Hide();
             cpu1.Hide();

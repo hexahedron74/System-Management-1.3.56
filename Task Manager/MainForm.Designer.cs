@@ -68,6 +68,7 @@ namespace Task_Manager
             this.cpu1 = new Task_Manager.CPU();
             this.gpu1 = new Task_Manager.GPU();
             this.license1 = new Task_Manager.License();
+            this.howToUse1 = new Task_Manager.HowToUse();
             this.formControlPanel.SuspendLayout();
             this.navBarPanel.SuspendLayout();
             this.statiticsPanel.SuspendLayout();
@@ -240,6 +241,7 @@ namespace Task_Manager
             this.howToUseBtn.TabIndex = 23;
             this.howToUseBtn.Text = "How To Use";
             this.howToUseBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.howToUseBtn.Click += new System.EventHandler(this.howToUseBtn_Click);
             // 
             // ATLabel
             // 
@@ -610,12 +612,22 @@ namespace Task_Manager
             this.license1.Size = new System.Drawing.Size(789, 679);
             this.license1.TabIndex = 7;
             // 
+            // howToUse1
+            // 
+            this.howToUse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.howToUse1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.howToUse1.Location = new System.Drawing.Point(179, 32);
+            this.howToUse1.Name = "howToUse1";
+            this.howToUse1.Size = new System.Drawing.Size(789, 679);
+            this.howToUse1.TabIndex = 8;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1234, 711);
+            this.Controls.Add(this.howToUse1);
             this.Controls.Add(this.license1);
             this.Controls.Add(this.developer1);
             this.Controls.Add(this.dashboard1);
@@ -685,6 +697,7 @@ namespace Task_Manager
         private System.Windows.Forms.Label ATLabel;
         private Developer developer1;
         private License license1;
+        private HowToUse howToUse1;
     }
 }
 

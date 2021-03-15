@@ -38,14 +38,14 @@ namespace Task_Manager
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.githubLink = new System.Windows.Forms.LinkLabel();
-            this.githubLabel = new System.Windows.Forms.Label();
-            this.blogLink = new System.Windows.Forms.LinkLabel();
-            this.blogLabel = new System.Windows.Forms.Label();
-            this.websiteLink = new System.Windows.Forms.LinkLabel();
-            this.websiteLabel = new System.Windows.Forms.Label();
             this.emailAdress = new System.Windows.Forms.LinkLabel();
             this.emailLabel = new System.Windows.Forms.Label();
+            this.websiteLink = new System.Windows.Forms.LinkLabel();
+            this.websiteLabel = new System.Windows.Forms.Label();
+            this.blogLink = new System.Windows.Forms.LinkLabel();
+            this.blogLabel = new System.Windows.Forms.Label();
+            this.githubLink = new System.Windows.Forms.LinkLabel();
+            this.githubLabel = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -72,7 +72,7 @@ namespace Task_Manager
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(32, 56);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(693, 282);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(726, 282);
             this.guna2CustomGradientPanel1.TabIndex = 29;
             // 
             // label5
@@ -145,60 +145,33 @@ namespace Task_Manager
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(32, 354);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(693, 282);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(726, 282);
             this.guna2CustomGradientPanel2.TabIndex = 30;
             // 
-            // githubLink
+            // emailAdress
             // 
-            this.githubLink.AutoSize = true;
-            this.githubLink.BackColor = System.Drawing.Color.White;
-            this.githubLink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.githubLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.githubLink.LinkColor = System.Drawing.Color.DimGray;
-            this.githubLink.Location = new System.Drawing.Point(178, 47);
-            this.githubLink.Name = "githubLink";
-            this.githubLink.Size = new System.Drawing.Size(275, 23);
-            this.githubLink.TabIndex = 26;
-            this.githubLink.TabStop = true;
-            this.githubLink.Text = "https://github.com/hexahedron74";
-            this.githubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.githubLink_LinkClicked);
+            this.emailAdress.AutoSize = true;
+            this.emailAdress.BackColor = System.Drawing.Color.White;
+            this.emailAdress.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailAdress.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.emailAdress.LinkColor = System.Drawing.Color.DimGray;
+            this.emailAdress.Location = new System.Drawing.Point(178, 223);
+            this.emailAdress.Name = "emailAdress";
+            this.emailAdress.Size = new System.Drawing.Size(219, 23);
+            this.emailAdress.TabIndex = 32;
+            this.emailAdress.TabStop = true;
+            this.emailAdress.Text = "hexahedron74@naver.com";
             // 
-            // githubLabel
+            // emailLabel
             // 
-            this.githubLabel.AutoSize = true;
-            this.githubLabel.BackColor = System.Drawing.Color.Transparent;
-            this.githubLabel.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.githubLabel.Location = new System.Drawing.Point(42, 30);
-            this.githubLabel.Name = "githubLabel";
-            this.githubLabel.Size = new System.Drawing.Size(139, 45);
-            this.githubLabel.TabIndex = 25;
-            this.githubLabel.Text = "GitHub:";
-            // 
-            // blogLink
-            // 
-            this.blogLink.AutoSize = true;
-            this.blogLink.BackColor = System.Drawing.Color.White;
-            this.blogLink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blogLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.blogLink.LinkColor = System.Drawing.Color.DimGray;
-            this.blogLink.Location = new System.Drawing.Point(178, 107);
-            this.blogLink.Name = "blogLink";
-            this.blogLink.Size = new System.Drawing.Size(306, 23);
-            this.blogLink.TabIndex = 28;
-            this.blogLink.TabStop = true;
-            this.blogLink.Text = "https://blog.naver.com/hexahedron74";
-            this.blogLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.blogLink_LinkClicked);
-            // 
-            // blogLabel
-            // 
-            this.blogLabel.AutoSize = true;
-            this.blogLabel.BackColor = System.Drawing.Color.Transparent;
-            this.blogLabel.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blogLabel.Location = new System.Drawing.Point(83, 90);
-            this.blogLabel.Name = "blogLabel";
-            this.blogLabel.Size = new System.Drawing.Size(98, 45);
-            this.blogLabel.TabIndex = 27;
-            this.blogLabel.Text = "Blog:";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Location = new System.Drawing.Point(67, 206);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(114, 45);
+            this.emailLabel.TabIndex = 31;
+            this.emailLabel.Text = "Email:";
             // 
             // websiteLink
             // 
@@ -226,30 +199,57 @@ namespace Task_Manager
             this.websiteLabel.TabIndex = 29;
             this.websiteLabel.Text = "WebSite:";
             // 
-            // emailAdress
+            // blogLink
             // 
-            this.emailAdress.AutoSize = true;
-            this.emailAdress.BackColor = System.Drawing.Color.White;
-            this.emailAdress.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailAdress.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.emailAdress.LinkColor = System.Drawing.Color.DimGray;
-            this.emailAdress.Location = new System.Drawing.Point(178, 223);
-            this.emailAdress.Name = "emailAdress";
-            this.emailAdress.Size = new System.Drawing.Size(219, 23);
-            this.emailAdress.TabIndex = 32;
-            this.emailAdress.TabStop = true;
-            this.emailAdress.Text = "hexahedron74@naver.com";
+            this.blogLink.AutoSize = true;
+            this.blogLink.BackColor = System.Drawing.Color.White;
+            this.blogLink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blogLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.blogLink.LinkColor = System.Drawing.Color.DimGray;
+            this.blogLink.Location = new System.Drawing.Point(178, 107);
+            this.blogLink.Name = "blogLink";
+            this.blogLink.Size = new System.Drawing.Size(306, 23);
+            this.blogLink.TabIndex = 28;
+            this.blogLink.TabStop = true;
+            this.blogLink.Text = "https://blog.naver.com/hexahedron74";
+            this.blogLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.blogLink_LinkClicked);
             // 
-            // emailLabel
+            // blogLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(67, 206);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(114, 45);
-            this.emailLabel.TabIndex = 31;
-            this.emailLabel.Text = "Email:";
+            this.blogLabel.AutoSize = true;
+            this.blogLabel.BackColor = System.Drawing.Color.Transparent;
+            this.blogLabel.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blogLabel.Location = new System.Drawing.Point(83, 90);
+            this.blogLabel.Name = "blogLabel";
+            this.blogLabel.Size = new System.Drawing.Size(98, 45);
+            this.blogLabel.TabIndex = 27;
+            this.blogLabel.Text = "Blog:";
+            // 
+            // githubLink
+            // 
+            this.githubLink.AutoSize = true;
+            this.githubLink.BackColor = System.Drawing.Color.White;
+            this.githubLink.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.githubLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.githubLink.LinkColor = System.Drawing.Color.DimGray;
+            this.githubLink.Location = new System.Drawing.Point(178, 47);
+            this.githubLink.Name = "githubLink";
+            this.githubLink.Size = new System.Drawing.Size(275, 23);
+            this.githubLink.TabIndex = 26;
+            this.githubLink.TabStop = true;
+            this.githubLink.Text = "https://github.com/hexahedron74";
+            this.githubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.githubLink_LinkClicked);
+            // 
+            // githubLabel
+            // 
+            this.githubLabel.AutoSize = true;
+            this.githubLabel.BackColor = System.Drawing.Color.Transparent;
+            this.githubLabel.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.githubLabel.Location = new System.Drawing.Point(42, 30);
+            this.githubLabel.Name = "githubLabel";
+            this.githubLabel.Size = new System.Drawing.Size(139, 45);
+            this.githubLabel.TabIndex = 25;
+            this.githubLabel.Text = "GitHub:";
             // 
             // Developer
             // 
